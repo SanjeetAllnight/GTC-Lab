@@ -57,13 +57,13 @@ for u,v in edges:
     if u in induced_nodes and v in induced_nodes:
         induced_edges.append((u,v))
 fig, ax = plt.subplots(2,2, figsize=(13,10))
-draw_graph(edges,pos,nodes,ax[0,0],"Original graph","#a7b8c9","#5a5a5a")
-draw_graph(spanning_edges,pos,nodes,ax[0,1],"Spanning subgraph","#b8d8b8","#2f6f2f")
-draw_graph(induced_edges,pos,induced_nodes,ax[1,0],"Induced subgraph","#d7c9a2","#6f5a2f")
+draw_graph(edges,pos,nodes,ax[0,0],"Original graph")
+draw_graph(spanning_edges,pos,nodes,ax[0,1],"Spanning subgraph")
+draw_graph(induced_edges,pos,induced_nodes,ax[1,0],"Induced subgraph")
 edge_nodes=set()
 for u,v in edge_induced_edges:
     edge_nodes.add(u)
     edge_nodes.add(v)
-draw_graph(edge_induced_edges,pos,list(edge_nodes),ax[1,1],"Edge-induced subgraph","#d1b5d8","#5b2f6f")
+draw_graph(edge_induced_edges,pos,list(edge_nodes),ax[1,1],"Edge-induced subgraph")
 plt.tight_layout()
 plt.show()

@@ -42,8 +42,11 @@ edge_induced_edges = [
     ("F","H"),("G","I")
 ]
 edge_induced_subgraph = G.edge_subgraph(edge_induced_edges).copy()
+
 fig, ax = plt.subplots(2,2, figsize=(13,10))
-nx.draw(G, pos,with_labels=True,node_size=180,node_color="#a7b8c9",edge_color="#5a5a5a",font_size=16,font_weight="bold",width=1.6,ax=ax[0,0])
+
+nx.draw(G, pos,with_labels=True,node_size=180);
+
 ax[0,0].set_title("Original graph")
 ax[0,0].axis("off")
 nx.draw(spanning_subgraph, pos,with_labels=True,node_size=180,node_color="#b8d8b8",edge_color="#2f6f2f",font_size=16,font_weight="bold",width=1.8,ax=ax[0,1])
